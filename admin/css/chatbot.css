@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    display:flex;
+    background:#0f172a;
+    color:white;
+}
+
+/* =========================================================
+SIDEBAR
+========================================================= */
+
+.sidebar{
+    width:250px;
+    height:100vh;
+    background:#001b44;
+    padding:30px 20px;
+    position:fixed;
+}
+
+.sidebar h2{
+    color:white;
+    margin-bottom:50px;
+    text-align:center;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin:25px 0;
+}
+
+.sidebar ul li a{
+    color:white;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:20px;
+}
+
+.sidebar ul li.active a{
+    color:gold;
+}
+
+/* =========================================================
+MAIN
+========================================================= */
+
+.main{
+    margin-left:250px;
+    width:calc(100% - 250px);
+    padding:30px;
+}
+
+.topbar h1{
+    color:gold;
+    margin-bottom:30px;
+}
+
+/* =========================================================
+CHAT
+========================================================= */
+
+.chat-container{
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+}
+
+.chat-box{
+    flex:1;
+    padding:20px;
+    overflow-y:auto;
+}
+
+.mensaje{
+    padding:15px;
+    border-radius:15px;
+    margin-bottom:15px;
+    max-width:70%;
+}
+
+.bot{
+    background:#334155;
+}
+
+.user{
+    background:gold;
+    color:black;
+    margin-left:auto;
+}
+
+/* =========================================================
+INPUT
+========================================================= */
+
+.chat-input{
+    display:flex;
+    background:#0f172a;
+    padding:20px;
+}
+
+.chat-input input{
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+}
+
+.chat-input button{
+    width:60px;
+    margin-left:10px;
+    border:none;
+    border-radius:10px;
+    background:gold;
+    cursor:pointer;
+    font-size:20px;
+}

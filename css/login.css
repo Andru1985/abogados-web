@@ -1,0 +1,240 @@
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* =========================================
+   BODY
+========================================= */
+
+body{
+    background:#0f172a;
+    color:white;
+    min-height:100vh;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+header{
+    width:100%;
+    padding:20px 60px;
+    background:#111827;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+/* LOGO */
+
+header h1{
+    color:gold;
+    font-size:28px;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+nav{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+/* LINKS */
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    padding:10px 18px;
+    border-radius:8px;
+    transition:0.3s;
+    position:relative;
+}
+
+/* HOVER */
+
+nav a:hover{
+    background:gold;
+    color:black;
+    transform:translateY(-2px);
+    box-shadow:0 0 15px rgba(255,215,0,0.5);
+}
+
+/* LINEA ANIMADA */
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:gold;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* =========================================
+   LOGIN SECTION
+========================================= */
+
+.login-section{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:140px 20px 50px;
+}
+
+/* =========================================
+   LOGIN BOX
+========================================= */
+
+.login-box{
+    width:100%;
+    max-width:450px;
+    background:#1e293b;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(0,0,0,0.5);
+    animation:fadeIn 1s ease;
+}
+
+/* TITULO */
+
+.login-box h2{
+    text-align:center;
+    margin-bottom:15px;
+    color:gold;
+    font-size:35px;
+}
+
+/* TEXTO */
+
+.login-box p{
+    text-align:center;
+    margin-bottom:30px;
+    color:#cbd5e1;
+}
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+/* INPUTS */
+
+form input{
+    width:100%;
+    padding:18px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:10px;
+    background:#0f172a;
+    color:white;
+    font-size:16px;
+    outline:none;
+    transition:0.3s;
+}
+
+/* EFECTO INPUT */
+
+form input:focus{
+    border:2px solid gold;
+    box-shadow:0 0 10px gold;
+}
+
+/* BOTON */
+
+form button{
+    background:gold;
+    color:black;
+    border:none;
+    padding:18px;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+/* HOVER BOTON */
+
+form button:hover{
+    background:white;
+    transform:scale(1.03);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:25px;
+    color:#cbd5e1;
+}
+
+/* =========================================
+   ANIMACION
+========================================= */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        padding:20px;
+    }
+
+    nav{
+        margin-top:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .login-box{
+        padding:35px;
+    }
+
+}

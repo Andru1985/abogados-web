@@ -1,0 +1,282 @@
+/* =========================================================
+   RESET GENERAL
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#07142c;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+    width:100%;
+    background:#0b1730;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    transition:0.4s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+}
+
+header h1{
+    color:white;
+    font-size:38px;
+    font-weight:bold;
+}
+
+/* HEADER SCROLL */
+
+header.scrolled{
+    background:#09101f;
+    padding:15px 8%;
+}
+
+/* =========================================================
+   MENU
+========================================================= */
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    width:0%;
+    height:2px;
+    background:gold;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:gold;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* =========================================================
+   ESPACIO HEADER
+========================================================= */
+
+.spacer{
+    height:120px;
+}
+
+/* =========================================================
+   SERVICIOS
+========================================================= */
+
+.services-container{
+    width:100%;
+    padding:60px 8%;
+    text-align:center;
+}
+
+.services-container h2{
+    font-size:55px;
+    color:gold;
+    margin-bottom:15px;
+}
+
+.services-container p{
+    font-size:20px;
+    color:#d1d5db;
+    margin-bottom:50px;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+/* =========================================================
+   TARJETAS
+========================================================= */
+
+.service-card{
+    background:#0f1f3d;
+    padding:40px 25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+    transition:0.4s;
+    opacity:0;
+    transform:translateY(40px);
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.service-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px rgba(255,215,0,0.3);
+}
+
+/* =========================================================
+   ICONOS
+========================================================= */
+
+.service-icon{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+/* =========================================================
+   TITULOS TARJETA
+========================================================= */
+
+.service-card h3{
+    font-size:30px;
+    color:gold;
+    margin-bottom:15px;
+}
+
+/* =========================================================
+   TEXTO TARJETA
+========================================================= */
+
+.service-card p{
+    font-size:17px;
+    color:#d1d5db;
+    margin-bottom:25px;
+    line-height:1.7;
+}
+
+/* =========================================================
+   BOTON
+========================================================= */
+
+.btn-service{
+    background:gold;
+    color:black;
+    border:none;
+    padding:14px 30px;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn-service:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    margin-top:60px;
+    background:#0b1730;
+    padding:25px;
+    text-align:center;
+    border-top:2px solid gold;
+}
+
+footer p{
+    color:#d1d5db;
+    font-size:16px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:991px){
+
+    header{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+
+    header h1{
+        font-size:30px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .services-container h2{
+        font-size:42px;
+    }
+
+    .services-container p{
+        font-size:18px;
+    }
+}
+
+@media(max-width:600px){
+
+    .spacer{
+        height:160px;
+    }
+
+    header h1{
+        font-size:24px;
+    }
+
+    nav a{
+        font-size:16px;
+    }
+
+    .services-container h2{
+        font-size:32px;
+    }
+
+    .service-card h3{
+        font-size:25px;
+    }
+
+    .service-card p{
+        font-size:15px;
+    }
+
+    .service-icon{
+        font-size:45px;
+    }
+
+    .btn-service{
+        width:100%;
+    }
+}

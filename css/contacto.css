@@ -1,0 +1,261 @@
+ /* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* =========================================
+   BODY
+========================================= */
+
+body{
+    background:#0f172a;
+    color:white;
+    min-height:100vh;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+header{
+    width:100%;
+    padding:20px 60px;
+    background:#111827;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+header h1{
+    color:gold;
+    font-size:28px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:0.3s;
+    font-size:17px;
+}
+
+nav a:hover{
+    color:gold;
+}
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact-section{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:140px 20px 80px;
+}
+
+/* =========================================
+   CONTACT BOX
+========================================= */
+
+.contact-box{
+    width:100%;
+    max-width:700px;
+    background:#1e293b;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(0,0,0,0.5);
+}
+
+/* =========================================
+   TITLES
+========================================= */
+
+.contact-box h2{
+    text-align:center;
+    margin-bottom:15px;
+    color:gold;
+    font-size:38px;
+}
+
+.contact-box p{
+    text-align:center;
+    margin-bottom:35px;
+    color:#cbd5e1;
+    line-height:1.6;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+/* INPUTS */
+
+form input,
+form textarea{
+    width:100%;
+    padding:18px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:10px;
+    background:#0f172a;
+    color:white;
+    font-size:16px;
+    outline:none;
+    transition:0.3s;
+}
+
+/* EFECTO */
+
+form input:focus,
+form textarea:focus{
+    border:2px solid gold;
+    box-shadow:0 0 10px gold;
+}
+
+/* TEXTAREA */
+
+form textarea{
+    resize:none;
+    min-height:180px;
+}
+
+/* BUTTON */
+
+form button{
+    background:gold;
+    color:black;
+    border:none;
+    padding:18px;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+form button:hover{
+    background:white;
+    transform:scale(1.03);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:25px;
+    color:#cbd5e1;
+}
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+/* LINKS */
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:500;
+    padding:10px 18px;
+    border-radius:8px;
+    transition:0.3s ease;
+    position:relative;
+}
+
+/* EFECTO HOVER */
+
+nav a:hover{
+    background:gold;
+    color:black;
+    transform:translateY(-2px);
+    box-shadow:0 0 15px rgba(255,215,0,0.5);
+}
+
+/* LINEA ANIMADA */
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:gold;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+        margin-top:15px;
+    }
+
+    nav a{
+        width:100%;
+        text-align:center;
+    }
+
+}
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        padding:20px;
+    }
+
+    nav{
+        margin-top:15px;
+    }
+
+    nav a{
+        margin:0 10px;
+    }
+
+    .contact-box{
+        padding:30px;
+    }
+
+    .contact-box h2{
+        font-size:30px;
+    }
+
+}

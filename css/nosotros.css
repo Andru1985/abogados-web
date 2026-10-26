@@ -1,0 +1,364 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', sans-serif;
+    background:#0d1b2a;
+    color:white;
+    overflow-x:hidden;
+    line-height:1.7;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+    transition:0.3s;
+}
+
+header.active{
+    background:#000814;
+}
+
+.logo{
+    color:gold;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:gold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:gold;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    width:100%;
+    height:100vh;
+    background:url('../img/fondo-nosotros.jpg') center center/cover no-repeat;
+}
+
+.overlay{
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,0.7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:850px;
+    animation:fadeUp 1s ease;
+}
+
+.hero-content h1{
+    font-size:70px;
+    color:gold;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:24px;
+    color:#ddd;
+}
+
+/* =========================================================
+   HISTORIA
+========================================================= */
+
+.historia{
+    width:100%;
+    padding:120px 60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.historia-img{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.historia-img img{
+    width:100%;
+    max-width:500px;
+    height:500px;
+    object-fit:cover;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.5);
+    transition:0.4s;
+}
+
+.historia-img img:hover{
+    transform:scale(1.03);
+}
+
+.historia-texto{
+    flex:1;
+    min-width:320px;
+    max-width:600px;
+}
+
+.historia-texto h2{
+    color:gold;
+    font-size:45px;
+    margin-bottom:25px;
+}
+
+.historia-texto p{
+    color:#ddd;
+    margin-bottom:20px;
+    font-size:18px;
+}
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.video-section{
+    width:100%;
+    padding:100px 40px;
+    text-align:center;
+}
+
+.video-section h2{
+    color:gold;
+    font-size:45px;
+    margin-bottom:50px;
+}
+
+.video-container{
+    display:flex;
+    justify-content:center;
+}
+
+.video-container video{
+    width:100%;
+    max-width:1000px;
+    height:550px;
+    object-fit:cover;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* =========================================================
+   GALERIA
+========================================================= */
+
+.galeria{
+    width:100%;
+    padding:100px 40px;
+    text-align:center;
+}
+
+.galeria h2{
+    color:gold;
+    font-size:45px;
+    margin-bottom:50px;
+}
+
+.galeria-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.galeria-grid img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:0.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.galeria-grid img:hover{
+    transform:scale(1.04);
+}
+
+/* =========================================================
+   EQUIPO
+========================================================= */
+
+.equipo{
+    width:100%;
+    padding:100px 40px;
+    text-align:center;
+}
+
+.equipo h2{
+    color:gold;
+    font-size:45px;
+    margin-bottom:50px;
+}
+
+.equipo-grid{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.card{
+    width:330px;
+    background:#1b263b;
+    border-radius:25px;
+    overflow:hidden;
+    transition:0.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    color:gold;
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.card-content p{
+    color:#ddd;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    background:#000814;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+/* =========================================================
+   ANIMACIONES
+========================================================= */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        padding:20px;
+    }
+
+    nav{
+        margin-top:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-content h1{
+        font-size:45px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+    .historia{
+        flex-direction:column;
+        text-align:center;
+        padding:80px 20px;
+    }
+
+    .historia-img img{
+        height:auto;
+    }
+
+    .video-section,
+    .galeria,
+    .equipo{
+        padding:80px 20px;
+    }
+
+    .video-container video{
+        height:auto;
+    }
+
+}

@@ -1,0 +1,141 @@
+
+/* =========================================================
+GENERAL
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    display:flex;
+}
+
+/* =========================================================
+SIDEBAR
+========================================================= */
+
+.sidebar{
+    width:250px;
+    height:100vh;
+    background:#001b44;
+    padding:30px 20px;
+    position:fixed;
+}
+
+.sidebar h2{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.sidebar a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:white;
+    text-decoration:none;
+    padding:15px;
+    margin-bottom:10px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.sidebar a:hover{
+    background:gold;
+    color:black;
+}
+
+/* =========================================================
+MAIN
+========================================================= */
+
+.main{
+    margin-left:250px;
+    width:calc(100% - 250px);
+    padding:30px;
+}
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.topbar h1{
+    color:gold;
+}
+
+.btn{
+    background:gold;
+    color:black;
+    padding:15px 20px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* =========================================================
+TABLA
+========================================================= */
+
+.tabla-box{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:gold;
+    color:black;
+    padding:15px;
+}
+
+table td{
+    padding:15px;
+    border-bottom:1px solid #334155;
+}
+
+table tr:hover{
+    background:#334155;
+}
+
+/* =========================================================
+ESTADO
+========================================================= */
+
+.estado{
+    background:gold;
+    color:black;
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+/* =========================================================
+ACCIONES
+========================================================= */
+
+.editar{
+    color:#38bdf8;
+    margin-right:15px;
+    font-size:18px;
+}
+
+.eliminar{
+    color:#ef4444;
+    font-size:18px;
+}
+
